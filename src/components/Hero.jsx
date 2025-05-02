@@ -6,7 +6,7 @@ export default function Hero() {
     return (
         <>
         <Banner/>
-        <Navbar/>
+      <Navbar/>
         <Header/>
         </>
     )
