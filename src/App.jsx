@@ -4,6 +4,7 @@ import Content from "./components/Content.jsx"
 import Stats from './components/Stats';
 import CTA from './components/CTA';
 import Testimonials from "./components/Testimonials.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
     <Content/>
     <CTA/>
     <Testimonials/>
+    <Footer/>
    </>
    )
 }
