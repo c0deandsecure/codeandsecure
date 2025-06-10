@@ -1,51 +1,61 @@
 import { RiPresentationFill } from "react-icons/ri";
 import { SlScreenDesktop } from "react-icons/sl";
 import { IoBarChartSharp } from "react-icons/io5";
+import { PiProjectorScreenChartLight } from "react-icons/pi";
+import { FaUserGear } from "react-icons/fa6";
 
 const products = [
     {
       id: 1,
-      name: 'Transperency',
+      name: 'Discover',
       href: '#',
       icon: <RiPresentationFill size={50}/>,
       
-      color: 'Openness with our team and clints, We rise issues and provide solution promptly.',
+      color: 'Information Gathering, Project Planning, Project Readiness',
     },
     {
       id: 2,
-      name: 'Commitment',
+      name: 'Define',
       href: '#',
-      icon: <SlScreenDesktop  size={50}/>,
+      icon: <PiProjectorScreenChartLight size={50}/>,
       
-      color: 'Our work and smart work over everything else. Our clients and vision and our guiding beacons.',
+      color: 'Scope Definition, Gap Assessment',
     },
     {
       id: 3,
-      name: 'Self Improvement',
+      name: 'Design',
       href: '#',
       icon: <SlScreenDesktop size={50}/>,
       
-      color: 'Never stop learning, never stop envolving into who we want to be and where we want to be.',
+      color: 'Development of Framework, Remediation Support',
     },
     {
       id: 4,
-      name: 'Our Delivery',
+      name: 'Deliver',
+      href: '#',
+      icon: <FaUserGear size={50}/>,
+      
+      color: 'Development of Framework, Remediation Support',
+    },
+    {
+      id: 5,
+      name: 'Drive',
       href: '#',
       icon: <IoBarChartSharp size={50}/>,
       
-      color: 'Deliver more value then our team & clients expects. Everyday over. over every delivery.',
+      color: 'On-going sustenance',
     },
   ]
   
-  export default function Stats() {
+  export default function FiveD() {
     return (
       <div className="bg-gray-50">
       
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-8">
           
-         <h2 className="flex justify-center  text-5xl  font-bold text-gray-900">Our Company Value</h2>
-         
-          <div className="mt-10  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4   justify-items-center ">
+         <h2 className="flex justify-center  text-5xl  font-bold text-gray-900">5D Working Process</h2>
+          <p className="flex justify-center text-xl  mt-9 text-gray-500">At Code and Secure, we take a risk-based approach to address the complexities encountered during strategy rollout.</p>
+          <div className="mt-10  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5   justify-items-center ">
             {products.map((product) => (
               <div key={product.id} className="flex flex-col bg-white justify-items-center content-center items-center group relative border-t-4 w-40 h-80  ">
                

@@ -1,21 +1,29 @@
 
-import Hero from "./components/Hero.jsx"
-import Content from "./components/Content.jsx"
-import Stats from './components/Stats';
-import CTA from './components/CTA';
-import Testimonials from "./components/Testimonials.jsx";
-import Footer from "./components/Footer.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
+import Services from "./pages/Services.jsx";
+import Homepage from "./pages/Homepage.jsx";
+import Career from "./pages/Career.jsx";
+import Testimonial from "./pages/Testimonial.jsx";
+import ContactUs from "./pages/ContactUs.jsx";
+import Products from "./pages/Products.jsx";
+import { BrowserRouter, Routes, Route  } from "react-router";
+
 
 function App() {
   
   return (
    <>
-    <Hero/>
-    <Stats/>
-    <Content/>
-    <CTA/>
-    <Testimonials/>
-    <Footer/>
+   <BrowserRouter>
+   <Routes>
+      <Route index element={<Homepage/>}/>
+      <Route path="about" element={<AboutUs />} />
+      <Route path="services" element={<Services />} />
+      <Route path="career" element={<Career />} />
+      <Route path="testimonial" element={<Testimonial />} />
+      <Route path="contactus" element={<ContactUs />} />
+      <Route path="products" element={<Products />} />
+   </Routes>
+   </BrowserRouter>
    </>
    )
 }
