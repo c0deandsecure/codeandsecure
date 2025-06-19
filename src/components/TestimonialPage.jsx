@@ -1,11 +1,11 @@
 const links = [
     { name: 'Home', href: '#' },
-    { name: 'About us', href: '#' },
+    { name: 'Testimonial', href: '#' },
     
   ]
   
   
-  export default function Header() {
+  export default function TestimonialPage() {
     return (
       <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
         <img
@@ -39,7 +39,7 @@ const links = [
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">About us</h2>
+            <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Testimonial</h2>
           </div>
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">

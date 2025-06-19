@@ -1,4 +1,4 @@
-
+import { NavLink } from "react-router";
 import { useState } from 'react'
 import {
   Dialog,
@@ -40,13 +40,13 @@ export default function Navbar() {
     <header className="bg-white ">
       <nav aria-label="Global" className=" mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <NavLink to="/" className="-m-1.5 p-1.5" end>
             <img
               alt=""
               src="src\assets\logo.png?color=black&shade=600"
               className="h-13 w-60"
             />
-          </a>
+          </NavLink>
         </div>
         <div className="lg:hidden">
           <button
@@ -60,12 +60,13 @@ export default function Navbar() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
 
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+           <NavLink to="/"  className="text-sm/6 font-semibold text-gray-900" end>
           Home
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          </NavLink>
+          <NavLink to="/about"  className="text-sm/6 font-semibold text-gray-900"end>
           About
-          </a>
+          </NavLink>
+         <NavLink to="/services" end>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
               Services
@@ -109,18 +110,19 @@ export default function Navbar() {
               </div>
             </PopoverPanel>
           </Popover>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+        </NavLink>
+          <NavLink to="/career"  className="text-sm/6 font-semibold text-gray-900" end>
           Career
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          </NavLink>
+          <NavLink to="/testimonial"  className="text-sm/6 font-semibold text-gray-900" end>
           Testimonial
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
-          Blog
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          </NavLink>
+          <NavLink to="/contactus" className="text-sm/6 font-semibold text-gray-900" end>
           Contact
-          </a>
+          </NavLink>
+          <NavLink to="/products"  className="text-sm/6 font-semibold text-gray-900" end>
+          Product
+          </NavLink>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           
@@ -139,13 +141,13 @@ export default function Navbar() {
         <div className="fixed inset-0 z-10 "  />
         <DialogPanel className=" fixed inset-y-0 right-0 z-10 w-70 overflow-y-auto bg-slate-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className=" flex items-center justify-between ">
-            <a href="#" className="-m-1.5 p-1.5">
+            <NavLink to="/" className="-m-1.5 p-1.5"end>
               <img
                 alt=""
                 src="src\assets\logo.png?color=indigo&shade=600?color=indigo&shade=600"
                 className="h-9 w-auto"
               />
-            </a>
+            </NavLink> 
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -158,18 +160,19 @@ export default function Navbar() {
           <div className="mt-3 flow-root">
             <div className="-my-6 ">
               <div className="space-y-2 py-6 ">
-              <a
-                  href="#"
+              <NavLink to="/"
+                  
                   className="-mx-3 border-t border-b border-gray-700 block  px-3 py-2 text-base/7 font-semibold text-white hover:text-indigo-600"
-                >
+                end>
                   Home
-                </a>
-                <a
+                </NavLink>
+                <NavLink to="/about"
                   href="#"
                   className="-mx-3 border-b border-gray-700 block  px-3 py-2  text-base/7 font-semibold text-white hover:text-indigo-600"
-                >
+                end>
                   About
-                </a>
+                </NavLink>
+                <NavLink to="/services" end>
                 <Disclosure as="div" className="-mx-3 border-b border-gray-700 ">
                   <DisclosureButton className=" group flex w-full items-center justify-between  py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:text-indigo-600">
                     Services
@@ -188,30 +191,27 @@ export default function Navbar() {
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink to="/career"
                   className="-mx-3 border-b  border-gray-700 block  px-3 py-2 text-base/7 font-semibold text-white hover:text-indigo-600"
-                >
+                end>
                   Career
-                </a>
-                <a
-                  href="#"
+               </NavLink>
+                <NavLink to="/testimonial"
                   className="-mx-3 border-b  border-gray-700 block  px-3 py-2 text-base/7 font-semibold text-white hover:text-indigo-600"
-                >
+                end>
                   Testimonial
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink to="/contactus"
                   className="-mx-3 border-b  border-gray-700 block  px-3 py-2 text-base/7 font-semibold text-white hover:text-indigo-600"
-                >
-                  Blog
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 border-b  border-gray-700 block  px-3 py-2 text-base/7 font-semibold text-white hover:text-indigo-600"
-                >
+                end>
                   Contact
-                </a>
+                </NavLink>
+                <NavLink to="/products" 
+                  className="-mx-3 border-b  border-gray-700 block  px-3 py-2 text-base/7 font-semibold text-white hover:text-indigo-600"
+                end>
+                  Product
+                </NavLink>
               </div>
               <div className="py-3 ">
                 <div                  
